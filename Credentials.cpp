@@ -14,6 +14,8 @@ public:
 
     void registerPage()
     {
+        int i;
+
         cout << "Please enter your new username" << endl;
         cout << "username: ";
         cin >> username;
@@ -27,7 +29,6 @@ public:
 
         //Add password to vector
         passwords.push_back(password);
-
     }
 
     void loginPage()
@@ -52,7 +53,7 @@ public:
             }
         }
 
-        for (j; i < 5; i++)
+        for (j = 0; i < 5; i++)
         {
             cout << "Still looking..." << endl;
             if (password == passwords[j])
@@ -62,9 +63,14 @@ public:
             }
         }   
 
-        if (username == usernames[i] && password == passwords[j])
+        if (username != usernames[i] || password != passwords[j])
+        {
+            cout << "Some of the credentials have been wrong!" << endl;
+            cout << "Please try again" << endl;
+        } else if (username == usernames[i] && password == passwords[j])
         {
             cout << "Login successful" << endl;
+            cout << endl;
         }
     }
 };

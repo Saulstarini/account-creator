@@ -8,7 +8,7 @@ int main()
     Credentials c;
     int action;
 
-    cout << "Select your action >";
+    cout << "Select your action >" << endl;
     cout << "> 1. Login" << endl;
     cout << "> 2. Register" << endl;
     cout << endl;
