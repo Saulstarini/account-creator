@@ -29,6 +29,12 @@ public:
 
         //Add password to vector
         passwords.push_back(password);
+
+        for (i = 0; i < 5; i++)
+        {
+            cout << usernames[i] << endl;
+            cout << passwords[i] << endl;
+        }
     }
 
     void loginPage()
